@@ -1,0 +1,38 @@
+{
+  "name": "prisma-interview-challenge",
+  "version": "1.0.0",
+  "description": "Prisma interview challenge",
+  "keywords": [
+    "prisma",
+    "interview",
+    "challenge"
+  ],
+  "license": "MIT",
+  "author": "David Majda <david@majda.cz>",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "build:query-parser": "peggy --output src/query-parser.cjs src/query-parser.peggy",
+    "test": "jest",
+    "format": "prettier --write src",
+    "lint": "eslint src"
+  },
+  "private": true,
+  "devDependencies": {
+    "@types/jest": "^29.5.13",
+    "@types/node": "^22.7.5",
+    "@typescript-eslint/eslint-plugin": "^8.8.1",
+    "@typescript-eslint/parser": "^8.8.1",
+    "eslint": "^8.57.1",
+    "eslint-config-prettier": "^9.1.0",
+    "jest": "^29.7.0",
+    "peggy": "^4.1.1",
+    "prettier": "^3.3.3",
+    "ts-jest": "^29.2.5",
+    "typescript": "^5.6.3"
+  },
+  "dependencies": {
+    "cli-table3": "^0.6.5",
+    "csv-parse": "^5.5.6"
+  }
+}
