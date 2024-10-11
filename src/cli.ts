@@ -20,7 +20,7 @@ let csv;
 try {
   csv = fs.readFileSync(file, "utf-8");
 } catch (e) {
-  console.error(`Error reading file: ${e}`);
+  console.error(`Error reading file: ${(e as Error).message}`);
   process.exit(1);
 }
 
@@ -30,7 +30,7 @@ let db;
 try {
   db = new Database(csv);
 } catch (e) {
-  console.error(`Error loading data: ${e}`);
+  console.error(`Error loading data: ${(e as Error).message}`);
   process.exit(1);
 }
 
@@ -40,7 +40,7 @@ let result;
 try {
   result = db.query(query);
 } catch (e) {
-  console.error(`Error executing query: ${e}`);
+  console.error(`Error executing query: ${(e as Error).message}`);
   process.exit(1);
 }
 
